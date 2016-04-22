@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         msharePreferences = getSharedPreferences("config", MODE_PRIVATE);
-        gv_home.findViewById(R.id.gv_home);
+        gv_home= (GridView) findViewById(R.id.gv_home);
 
         gv_home.setAdapter(new HomeAdapter(HomeActivity.this));
         gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
