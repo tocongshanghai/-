@@ -1,4 +1,4 @@
-package com.tocong.mymobilesafe;
+﻿package com.tocong.mymobilesafe;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
