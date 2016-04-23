@@ -24,6 +24,8 @@
         </activity>
 <activity android:name=".MainActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".chapter02.LostFindActivity"></activity>
+        <activity android:name=".chapter02.SetUp1Activity"></activity>
     </application>
 
 </manifest>

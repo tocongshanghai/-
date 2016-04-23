@@ -27,19 +27,19 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         msharePreferences = getSharedPreferences("config", MODE_PRIVATE);
-        gv_home= (GridView) findViewById(R.id.gv_home);
+        gv_home = (GridView) findViewById(R.id.gv_home);
 
         gv_home.setAdapter(new HomeAdapter(HomeActivity.this));
         gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        if(isSetUpPassword()){
+                        if (isSetUpPassword()) {
                             showInterPswdDialog();
-                            
-                        }else{
-                            
+
+                        } else {
+
                             showSetUpPswdDialog();
                         }
                         break;
@@ -63,12 +63,11 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
 
-            
+
         });
 
     }
 
-    
 
     /*
     *private void showInterPswdDialog() {
@@ -102,12 +101,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-/*
-* 判断用户是否设置防盗密码
-* */
-    private boolean isSetUpPassword(){
-        String password=msharePreferences.getString("PhoneAntiTheftPWD",null);
-        if(TextUtils.isEmpty(password)){
+    /*
+    * 判断用户是否设置防盗密码
+    * */
+    private boolean isSetUpPassword() {
+        String password = msharePreferences.getString("PhoneAntiTheftPWD", null);
+        if (TextUtils.isEmpty(password)) {
             return false;
 
         }
@@ -116,54 +115,52 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-/*
-* 弹出密码设置对话框
-* */
-    private void showSetUpPswdDialog(){
-    final SetUpPasswordDialog setUpPasswordDialog=new SetUpPasswordDialog(HomeActivity.this);
+    /*
+    * 弹出密码设置对话框
+    * */
+    private void showSetUpPswdDialog() {
+        final SetUpPasswordDialog setUpPasswordDialog = new SetUpPasswordDialog(HomeActivity.this);
 
-setUpPasswordDialog.setMyCallBack(new SetUpPasswordDialog.MyCallBack() {
-    @Override
-    public void ok() {
-        String firstPwsd=setUpPasswordDialog.mFirstPWDET.getText().toString().trim();
-        String affirmPwsd=setUpPasswordDialog.mAffirmET.getText().toString().trim();
-        if(!TextUtils.isEmpty(firstPwsd)&&!TextUtils.isEmpty(affirmPwsd)){
-            if(firstPwsd.equals(affirmPwsd)){
-                //保存密码
-savePswd(affirmPwsd);
-                setUpPasswordDialog.dismiss();
-                //显示输入密码对话框
+        setUpPasswordDialog.setMyCallBack(new SetUpPasswordDialog.MyCallBack() {
+            @Override
+            public void ok() {
+                String firstPwsd = setUpPasswordDialog.mFirstPWDET.getText().toString().trim();
+                String affirmPwsd = setUpPasswordDialog.mAffirmET.getText().toString().trim();
+                if (!TextUtils.isEmpty(firstPwsd) && !TextUtils.isEmpty(affirmPwsd)) {
+                    if (firstPwsd.equals(affirmPwsd)) {
+                        //保存密码
+                        savePswd(affirmPwsd);
+                        setUpPasswordDialog.dismiss();
+                        //显示输入密码对话框
 
 
-            }else{
-                Toast.makeText(HomeActivity.this,"两次密码不一致",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(HomeActivity.this, "两次密码不一致", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } else {
+                    Toast.makeText(HomeActivity.this, "不能为空", Toast.LENGTH_SHORT).show();
+                }
+
             }
 
-
-        }else{
-            Toast.makeText(HomeActivity.this,"不能为空",Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    @Override
-    public void cancle() {
-setUpPasswordDialog.dismiss();
-    }
-});
-setUpPasswordDialog.setCancelable(true);
+            @Override
+            public void cancle() {
+                setUpPasswordDialog.dismiss();
+            }
+        });
+        setUpPasswordDialog.setCancelable(true);
         setUpPasswordDialog.show();
     }
-
-
 
 
     /*
     * 弹出密码输入框
     * */
-    private void showInterPswdDialog(){
-        final String password=getPassword();
-        final InterPasswordDialog interPasswordDialog=new InterPasswordDialog(HomeActivity.this);
+    private void showInterPswdDialog() {
+        final String password = getPassword();
+        final InterPasswordDialog interPasswordDialog = new InterPasswordDialog(HomeActivity.this);
         interPasswordDialog.setCallBack(new InterPasswordDialog.MyCallBack() {
             @Override
             public void confirm() {
@@ -172,60 +169,44 @@ setUpPasswordDialog.setCancelable(true);
 
                 } else if (password.equals(MD5Utils.encode(interPasswordDialog.getPassword()))) {
                     interPasswordDialog.dismiss();
-                    startActivity(MainActivity.class);
+                    startActivity(LostFindActivity.class);
 
                 } else {
                     interPasswordDialog.dismiss();
                     Toast.makeText(HomeActivity.this, "密码有误，重新输入", Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void cancle() {
-interPasswordDialog.dismiss();
+                interPasswordDialog.dismiss();
             }
         });
         interPasswordDialog.setCancelable(true);
-interPasswordDialog.show();
+        interPasswordDialog.show();
 
     }
 
 //保存密码
 
-    private  void savePswd(String affirmPwsd){
-        SharedPreferences.Editor editor=msharePreferences.edit();
+    private void savePswd(String affirmPwsd) {
+        SharedPreferences.Editor editor = msharePreferences.edit();
         editor.putString("PhoneAntiTheftPWD", MD5Utils.encode(affirmPwsd));
         editor.commit();
 
     }
 
 
-//取出保存的密码
-    private String getPassword(){
-        String password=msharePreferences.getString("PhoneAntiTheftPWD",null);
-        if(TextUtils.isEmpty(password)){
+    //取出保存的密码
+    private String getPassword() {
+        String password = msharePreferences.getString("PhoneAntiTheftPWD", null);
+        if (TextUtils.isEmpty(password)) {
 
             return "";
         }
         return password;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
