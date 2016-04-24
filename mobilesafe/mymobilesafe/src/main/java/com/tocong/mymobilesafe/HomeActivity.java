@@ -1,5 +1,6 @@
 package com.tocong.mymobilesafe;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import com.tocong.mymobilesafe.chapter02.dialog.SetUpPasswordDialog;
 import com.tocong.mymobilesafe.chapter02.utils.MD5Utils;
 import com.tocong.mymobilesafe.chatper01.adapyer.HomeAdapter;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends Activity {
     private GridView gv_home;
     private SharedPreferences msharePreferences;
     private long mExitTime;
