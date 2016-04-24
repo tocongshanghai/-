@@ -1,4 +1,4 @@
-﻿package com.tocong.mymobilesafe;
+package com.tocong.mymobilesafe;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -84,7 +84,7 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onkeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (System.currentTimeMillis() - mExitTime > 2000) {
-                Toast.makeText(this, "back again ", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "back again ", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
 
 
