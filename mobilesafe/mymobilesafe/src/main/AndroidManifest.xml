@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,6 +32,13 @@
         <activity android:name=".chapter02.SetUp3Activity" />
         <activity android:name=".chapter02.ContactSelectActivity" />
         <activity android:name=".chapter02.SetUp4Activity"></activity>
+        <receiver android:name=".chapter02.receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
