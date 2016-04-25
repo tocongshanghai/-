@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tocong.mymobilesafe">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -22,10 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<activity android:name=".MainActivity"></activity>
-        <activity android:name=".chapter02.LostFindActivity"></activity>
-        <activity android:name=".chapter02.SetUp1Activity"></activity>
-        <activity android:name=".HomeActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".chapter02.LostFindActivity" />
+        <activity android:name=".chapter02.SetUp1Activity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".chapter02.SetUp2Activity" />
+        <activity android:name=".chapter02.SetUp3Activity" />
+        <activity android:name=".chapter02.ContactSelectActivity" />
+        <activity android:name=".chapter02.SetUp4Activity"></activity>
     </application>
 
 </manifest>

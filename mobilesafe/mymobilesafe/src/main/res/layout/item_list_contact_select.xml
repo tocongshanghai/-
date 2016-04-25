@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#10000000"
+    android:orientation="horizontal"
+    >
+<ImageView
+    android:id="@+id/view1"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_gravity="center_vertical"
+android:layout_marginLeft="15dp"
+    android:background="@mipmap/contact_icon"
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            style="@style/textview16sp"
+            android:id="@+id/tv_name"
+           android:layout_marginTop="10dp"
+            android:textColor="@color/purple"
+            android:text="姓名"
+            />
+        <TextView
+          style="@style/textview14sp"
+            android:id="@+id/tv_phone"
+            android:layout_below="@id/tv_name"
+            android:text="号码"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/purple"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
