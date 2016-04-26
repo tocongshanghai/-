@@ -19,6 +19,7 @@ import com.tocong.mymobilesafe.chapter02.dialog.InterPasswordDialog;
 import com.tocong.mymobilesafe.chapter02.dialog.SetUpPasswordDialog;
 import com.tocong.mymobilesafe.chapter02.receiver.MyDeviceAdminReceiver;
 import com.tocong.mymobilesafe.chapter02.utils.MD5Utils;
+import com.tocong.mymobilesafe.chapter03.SecurityPhoneActivity;
 import com.tocong.mymobilesafe.chatper01.adapyer.HomeAdapter;
 
 public class HomeActivity extends Activity {
@@ -49,6 +50,8 @@ private ComponentName componentName;//申请权限
                         }
                         break;
                     case 1:
+                        //开启通讯卫士
+                        startActivity(SecurityPhoneActivity.class);
                         break;
                     case 2:
                         break;
