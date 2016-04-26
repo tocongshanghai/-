@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyMobileSafe</string>
     <string name="_sim_sim_bind_info">"    绑定SIM卡后，当再次重启手机时，若SIM卡信息发生变化，手机卫士会自动发送报警短信给安全号码！"</string>
+    <string name="sample_device_admin_description">我是设备管理员。开启我之后就可以清除数据，远程数据。</string>
+    <string name="sample_device_admin">手机卫士管理器</string>
+    <string name="_operatorset_string">"  仅一次简单的设置，以后便可以便捷矫正流量，时刻保持与运营商精准同步。"</string>
 </resources>
