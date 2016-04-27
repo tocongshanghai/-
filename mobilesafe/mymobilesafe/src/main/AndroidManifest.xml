@@ -67,9 +67,10 @@
         <!-- service -->
         <service
             android:name=".chapter02.service.GPSLocationService"
-            android:persistent="true"></service>
+            android:persistent="true" />
 
-        <activity android:name=".chapter03.SecurityPhoneActivity"></activity>
+        <activity android:name=".chapter03.SecurityPhoneActivity" />
+        <activity android:name=".chapter03.addBlackNumberActivity"></activity>
     </application>
 
 </manifest>
