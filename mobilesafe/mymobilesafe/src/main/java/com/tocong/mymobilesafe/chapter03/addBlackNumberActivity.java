@@ -2,6 +2,7 @@ package com.tocong.mymobilesafe.chapter03;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,6 +29,7 @@ public class addBlackNumberActivity extends Activity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_blacknumber);
         dao = new BlackNumberDao(this);
+        initView();
 
     }
 
@@ -75,23 +77,39 @@ public class addBlackNumberActivity extends Activity implements View.OnClickList
                         Toast.makeText(this, "请选择拦截模式", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    if(!dao.IsNumberExist(blackContactInfo.getPhoneNumber())){
+                    if (!dao.IsNumberExist(blackContactInfo.getPhoneNumber())) {
                         dao.add(blackContactInfo);
 
-                    }else {
-                        Toast.makeText(this,"该号码已经被添加至黑名单",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "该号码已经被添加至黑名单", Toast.LENGTH_SHORT).show();
                     }
+                          Intent intent=new Intent();  //方法1，添加
+                    intent.putExtra("achieved","好友");
+                    setResult(0,intent);
+
+
                     finish();
                 }
 
                 break;
 
-            case  R.id.add_fromcontact_btn:
-
+            case R.id.add_fromcontact_btn:
+                startActivityForResult(new Intent(this, ContactSelectActivity.class), 0);
 
                 break;
 
 
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data!=null){
+            String phone=data.getStringExtra("phone");
+            String name=data.getStringExtra("name");
+            mNameET.setText(name);
+            mNumET.setText(phone);
         }
     }
 }

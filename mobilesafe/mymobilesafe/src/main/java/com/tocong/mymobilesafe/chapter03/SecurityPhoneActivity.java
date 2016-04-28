@@ -49,7 +49,10 @@ public class SecurityPhoneActivity extends Activity implements View.OnClickListe
                 finish();
             break;
             case R.id.btn_addblacknumber:
-                startActivity(new Intent(this,MainActivity.class));
+              //原来的  startActivity(new Intent(this,addBlackNumberActivity.class));
+                startActivityForResult(new Intent(this,addBlackNumberActivity.class),0);
+
+
         }
     }
 
@@ -132,5 +135,14 @@ public class SecurityPhoneActivity extends Activity implements View.OnClickListe
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null&&resultCode==0){
+            fillData();
+
+        }
     }
 }
