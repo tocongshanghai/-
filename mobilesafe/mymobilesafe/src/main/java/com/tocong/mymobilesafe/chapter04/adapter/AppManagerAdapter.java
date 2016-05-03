@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.tocong.mymobilesafe.R;
 import com.tocong.mymobilesafe.chapter04.entity.AppInfo;
 import com.tocong.mymobilesafe.chapter04.utils.DensityUtil;
+import com.tocong.mymobilesafe.chapter04.utils.EngineUtils;
 
 import java.util.Formatter;
 import java.util.List;
@@ -99,6 +100,7 @@ public class AppManagerAdapter extends BaseAdapter {
             viewHolder.mShareAppTV = (TextView) convertView.findViewById(R.id.tv_share_app);
             viewHolder.mSettingAppTV = (TextView) convertView.findViewById(R.id.tv_setting_app);
             viewHolder.mAppOptionll = (LinearLayout) convertView.findViewById(R.id.ll_option_app);
+            convertView.setTag(viewHolder);
 
         }
         if (appInfo != null) {
@@ -168,12 +170,17 @@ public class AppManagerAdapter extends BaseAdapter {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.tv_launch_app:
+                    EngineUtils.startApplication(context,appInfo);
                     break;
                 case R.id.tv_uninstall_app:
+
+                    EngineUtils.uninstallApplication(context,appInfo);
                     break;
                 case R.id.tv_share_app:
+                    EngineUtils.shareApplication(context,appInfo);
                     break;
                 case R.id.tv_setting_app:
+                    EngineUtils.SettingAppDetail(context,appInfo);
                     break;
 
             }

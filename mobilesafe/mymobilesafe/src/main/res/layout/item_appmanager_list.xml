@@ -25,7 +25,7 @@
         <TextView
             style="@style/textview16sp"
             android:id="@+id/tv_appname"
-            android:layout_toRightOf="@id/imagv_appicon"
+            android:layout_toRightOf="@+id/imagv_appicon"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:text="app名字"
@@ -36,8 +36,8 @@
            android:id="@+id/tv_appisroom"
            style="@style/textview14sp"
            android:layout_marginTop="3dp"
-           android:layout_alignLeft="@id/tv_appname"
-            android:layout_toRightOf="@id/iv_icon"
+           android:layout_alignLeft="@+id/tv_appname"
+            android:layout_toRightOf="@+id/imagv_appicon"
             android:layout_below="@id/tv_appname"
             android:text="approom"
             />

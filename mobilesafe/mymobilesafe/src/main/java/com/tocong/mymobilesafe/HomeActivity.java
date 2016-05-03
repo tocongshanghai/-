@@ -20,6 +20,7 @@ import com.tocong.mymobilesafe.chapter02.receiver.MyDeviceAdminReceiver;
 import com.tocong.mymobilesafe.chapter02.utils.MD5Utils;
 import com.tocong.mymobilesafe.chapter03.SecurityPhoneActivity;
 import com.tocong.mymobilesafe.chapter01.adapyer.HomeAdapter;
+import com.tocong.mymobilesafe.chapter04.AppMnaagerActivity;
 
 public class HomeActivity extends Activity {
     private GridView gv_home;
@@ -53,6 +54,7 @@ private ComponentName componentName;//申请权限
                         startActivity(SecurityPhoneActivity.class);
                         break;
                     case 2:
+                        startActivity(AppMnaagerActivity.class);
                         break;
                     case 3:
                         break;
