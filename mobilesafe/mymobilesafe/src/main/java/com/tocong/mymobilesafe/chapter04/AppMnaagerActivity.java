@@ -43,9 +43,10 @@ public class AppMnaagerActivity extends Activity implements View.OnClickListener
                 case 10:
                     if (adapter == null) {
                         adapter = new AppManagerAdapter(AppMnaagerActivity.this, userAppInfos, systemAppInfos);
-                        mListView.setAdapter(adapter);
-                        adapter.notifyDataSetChanged();
+
                     }
+                    mListView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                     break;
                 case 15:
                     adapter.notifyDataSetChanged();
@@ -156,7 +157,7 @@ public class AppMnaagerActivity extends Activity implements View.OnClickListener
                                 } else {
                                     mappInfo.setSelected(true);
                                 }
-                                handler.sendEmptyMessage(15);
+                              handler.sendEmptyMessage(15);
                             }
 
                         }
