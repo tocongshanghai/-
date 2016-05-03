@@ -1,12 +1,12 @@
-package com.tocong.mymobilesafe.chatper01;
+package com.tocong.mymobilesafe.chapter01;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.tocong.mymobilesafe.R;
-import com.tocong.mymobilesafe.chatper01.utils.MyUtils;
-import com.tocong.mymobilesafe.chatper01.utils.VersionUpdateUtils;
+import com.tocong.mymobilesafe.chapter01.utils.MyUtils;
+import com.tocong.mymobilesafe.chapter01.utils.VersionUpdateUtils;
 
 public class SplashActivity extends AppCompatActivity {
 

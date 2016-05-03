@@ -1,4 +1,4 @@
-package com.tocong.mymobilesafe.chatper01.utils;
+package com.tocong.mymobilesafe.chapter01.utils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,7 +14,7 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.tocong.mymobilesafe.HomeActivity;
 import com.tocong.mymobilesafe.R;
-import com.tocong.mymobilesafe.chatper01.entity.VersionEntity;
+import com.tocong.mymobilesafe.chapter01.entity.VersionEntity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

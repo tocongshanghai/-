@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:background="@mipmap/launch_bg"
-    tools:context="com.tocong.mymobilesafe.chatper01.SplashActivity">
+    tools:context="com.tocong.mymobilesafe.chapter01.SplashActivity">
 
 
 

@@ -17,7 +17,6 @@ import android.util.Log;
 
 import com.android.internal.telephony.ITelephony;
 import com.tocong.mymobilesafe.chapter03.db.dao.BlackNumberDao;
-import com.tocong.mymobilesafe.chatper01.utils.StreamUtils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

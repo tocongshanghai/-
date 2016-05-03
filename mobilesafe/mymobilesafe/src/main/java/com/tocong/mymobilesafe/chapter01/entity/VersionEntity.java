@@ -1,4 +1,4 @@
-package com.tocong.mymobilesafe.chatper01.entity;
+package com.tocong.mymobilesafe.chapter01.entity;
 
 /**
  * Created by tocong on 2016/4/21.

@@ -16,13 +16,12 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
-    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:name=".App"
@@ -31,7 +30,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chatper01.SplashActivity">
+        <activity android:name=".chapter01.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -77,24 +76,22 @@
             android:persistent="true" />
 
         <activity android:name=".chapter03.SecurityPhoneActivity" />
-        <activity android:name=".chapter03.addBlackNumberActivity"></activity>
-        <activity android:name=".chapter03.ContactSelectActivity"></activity>
+        <activity android:name=".chapter03.addBlackNumberActivity" />
+        <activity android:name=".chapter03.ContactSelectActivity" />
 
         <receiver android:name=".chapter03.receiver.interceptSmsReceiver">
             <intent-filter android:priority="2147483647">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
-
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-
         </receiver>
         <receiver android:name=".chapter03.receiver.InterceptCallReceiver">
-            <intent-filter  android:priority="2147483647">
-                <action android:name="android.intent.action.PHONE_STATE"/>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
-
         </receiver>
-    </application>
 
+        <activity android:name=".chapter04.AppMnaagerActivity"></activity>
+    </application>
 
 </manifest>

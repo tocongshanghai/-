@@ -1,6 +1,5 @@
-package com.tocong.mymobilesafe.chatper01.utils;
+package com.tocong.mymobilesafe.chapter01.utils;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
