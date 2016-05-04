@@ -21,6 +21,7 @@ import com.tocong.mymobilesafe.chapter02.utils.MD5Utils;
 import com.tocong.mymobilesafe.chapter03.SecurityPhoneActivity;
 import com.tocong.mymobilesafe.chapter01.adapyer.HomeAdapter;
 import com.tocong.mymobilesafe.chapter04.AppMnaagerActivity;
+import com.tocong.mymobilesafe.chapter05.VirusScanActivity;
 
 public class HomeActivity extends Activity {
     private GridView gv_home;
@@ -57,6 +58,7 @@ private ComponentName componentName;//申请权限
                         startActivity(AppMnaagerActivity.class);
                         break;
                     case 3:
+                        startActivity(VirusScanActivity.class);
                         break;
 
                     case 4:

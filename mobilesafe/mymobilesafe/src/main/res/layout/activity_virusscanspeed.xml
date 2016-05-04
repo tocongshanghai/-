@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:orientation="vertical"
+    tools:context="com.tocong.mymobilesafe.chapter05.VirusScanSpeedActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/blue"
+        >
+        <TextView
+            style="@style/wrapcontent"
+            android:id="@+id/tv_scanprocess"
+            android:layout_centerInParent="true"
+            android:textSize="38sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="ceshi"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imgv_scaningicon"
+                android:background="@mipmap/scanning_icon"
+                />
+            <TextView
+                style="@style/textview16sp"
+                android:id="@+id/tv_scanapp"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:text="appname"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_scanapps"
+        android:layout_weight="10"
+        ></ListView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_canclescan"
+            android:layout_width="312dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cancle_scan_btn_selector" />
+    </LinearLayout>
+
+</LinearLayout>
