@@ -22,8 +22,8 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
-    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
 
     <application
         android:name=".App"
@@ -93,7 +93,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".chapter04.AppMnaagerActivity"></activity>
+        <activity android:name=".chapter04.AppMnaagerActivity" />
+        <activity android:name=".chapter05.VirusScanActivity" />
+        <activity android:name=".chapter05.VirusScanSpeedActivity"></activity>
     </application>
 
 </manifest>
