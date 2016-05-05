@@ -89,7 +89,7 @@ copyDB("antivirus.db");
                 finish();
                 break;
             case R.id.rl_allscanvirus:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, VirusScanSpeedActivity.class));
                 break;
         }
     }

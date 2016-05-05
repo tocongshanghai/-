@@ -18,7 +18,7 @@
         style="@style/textview16sp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/imagv_appicon"
+        android:layout_toRightOf="@id/imgv_appicon"
         android:textColor="@color/dark_gray" />
 
     <ImageView

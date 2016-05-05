@@ -53,7 +53,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/imgv_quickscan"
-            android:text="tv_allscan" />
+            android:text="全盘扫描" />
 
         <TextView
             style="@style/textview14sp"

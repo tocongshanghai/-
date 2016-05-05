@@ -11,7 +11,7 @@ import java.io.File;
  * 检查某个md5是否是病毒
  */
 public class AntiVirusDao {
-    private static String DATABASE = "/data/data/cn.tocong.mymobilesafe/files/antivirus.db";
+    private static String DATABASE = "/data/data/com.tocong.mymobilesafe/files/antivirus.db";
 
 
     /*
