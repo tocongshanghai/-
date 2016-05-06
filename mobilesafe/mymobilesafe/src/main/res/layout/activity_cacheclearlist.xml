@@ -51,7 +51,7 @@ android:orientation="vertical"
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/l_scancache"
+        android:id="@+id/lv_scancache"
         android:layout_weight="10"
         ></ListView>
 <LinearLayout

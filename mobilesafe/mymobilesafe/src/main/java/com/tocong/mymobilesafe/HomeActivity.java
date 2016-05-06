@@ -22,6 +22,8 @@ import com.tocong.mymobilesafe.chapter03.SecurityPhoneActivity;
 import com.tocong.mymobilesafe.chapter01.adapyer.HomeAdapter;
 import com.tocong.mymobilesafe.chapter04.AppMnaagerActivity;
 import com.tocong.mymobilesafe.chapter05.VirusScanActivity;
+import com.tocong.mymobilesafe.chapter06.CacheClearListActivity;
+import com.tocong.mymobilesafe.chapter06.adapter.CacheClearAdapter;
 
 public class HomeActivity extends Activity {
     private GridView gv_home;
@@ -62,6 +64,7 @@ private ComponentName componentName;//申请权限
                         break;
 
                     case 4:
+                        startActivity(CacheClearListActivity.class);
                         break;
                     case 5:
                         break;

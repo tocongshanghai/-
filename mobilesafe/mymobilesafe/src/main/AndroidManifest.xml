@@ -96,7 +96,8 @@
         <activity android:name=".chapter04.AppMnaagerActivity" />
         <activity android:name=".chapter05.VirusScanActivity" />
         <activity android:name=".chapter05.VirusScanSpeedActivity" />
-        <activity android:name=".chapter06.CacheClearListActivity"></activity>
+        <activity android:name=".chapter06.CacheClearListActivity" />
+        <activity android:name=".chapter06.CleanCacheActivity"></activity>
     </application>
 
 </manifest>
