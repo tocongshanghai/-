@@ -24,6 +24,8 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
 
     <application
         android:name=".App"
@@ -97,7 +99,8 @@
         <activity android:name=".chapter05.VirusScanActivity" />
         <activity android:name=".chapter05.VirusScanSpeedActivity" />
         <activity android:name=".chapter06.CacheClearListActivity" />
-        <activity android:name=".chapter06.CleanCacheActivity"></activity>
+        <activity android:name=".chapter06.CleanCacheActivity" />
+        <activity android:name=".chapter07.ProcessManagerActivity"></activity>
     </application>
 
 </manifest>
