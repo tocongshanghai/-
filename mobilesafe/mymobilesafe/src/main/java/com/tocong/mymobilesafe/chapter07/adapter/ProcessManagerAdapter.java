@@ -73,10 +73,11 @@ public class ProcessManagerAdapter extends BaseAdapter {
             tv.setText("用户进程:" + mUsertaskInfos.size() + "个");
             return tv;
         } else if (position == mUsertaskInfos.size() + 1) {
-
-            TextView tv = getTextView();
-            tv.setText("系统进程:" + mSystaskInfos.size() + "个");
-            return tv;
+            if (mSystaskInfos.size() > 0) {
+                TextView tv = getTextView();
+                tv.setText("系统进程:" + mSystaskInfos.size() + "个");
+                return tv;
+            }
         }
 
         TaskInfo taskInfo = null;

@@ -37,8 +37,7 @@
         android:button="@drawable/green_checkbox_selector"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:focusable="false"
-        android:clickable="false"
+
         android:layout_marginRight="10dp"/>
 
 </RelativeLayout>
