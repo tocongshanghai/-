@@ -100,7 +100,8 @@
         <activity android:name=".chapter06.CacheClearListActivity" />
         <activity android:name=".chapter06.CleanCacheActivity" />
         <activity android:name=".chapter07.ProcessManagerActivity" />
-        <activity android:name=".chapter09.AdvancedToolsActivity"></activity>
+        <activity android:name=".chapter09.AdvancedToolsActivity" />
+        <activity android:name=".chapter09.NumBelongActivity"></activity>
     </application>
 
 </manifest>
