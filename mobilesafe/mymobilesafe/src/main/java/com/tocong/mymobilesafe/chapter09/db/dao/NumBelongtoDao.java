@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
+import android.util.Log;
 
 /**
  * Created by yichunyan on 2016/5/11.
@@ -12,7 +13,8 @@ public class NumBelongtoDao {
 
     public static String getLocation(String phonenumber, Context context) {
         String location = phonenumber;
-        SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getFilesDir() + "/address.db", null, SQLiteDatabase.OPEN_READONLY);
+        SQLiteDatabase db = SQLiteDatabase.openDatabase("/data/data/com.tocong.mymobilesafe/files/address.db", null, SQLiteDatabase.OPEN_READONLY);
+        Log.i("db",db.getPath());
         if (phonenumber.matches("^1[34578]\\d{9}$")) {
 
             Cursor cursor = db.rawQuery("select location from data2 where id=(select outkey from data1 where id=?)", new String[]{phonenumber.substring(0, 7)});
