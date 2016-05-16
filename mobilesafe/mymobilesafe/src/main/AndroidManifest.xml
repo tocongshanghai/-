@@ -101,7 +101,8 @@
         <activity android:name=".chapter06.CleanCacheActivity" />
         <activity android:name=".chapter07.ProcessManagerActivity" />
         <activity android:name=".chapter09.AdvancedToolsActivity" />
-        <activity android:name=".chapter09.NumBelongActivity"></activity>
+        <activity android:name=".chapter09.NumBelongActivity" />
+        <activity android:name=".chapter10.SettingActivity"></activity>
     </application>
 
 </manifest>

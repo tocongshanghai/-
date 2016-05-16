@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tocong.mymobilesafe.chapter10.SettingActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <com.tocong.mymobilesafe.chapter10.widget.SettingView
+        android:id="@+id/sv_blacknumber_set"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:settitle="黑名单拦截设置"
+        app:status_off="黑名单已经关闭"
+        app:status_on="黑名单已经开启">
+
+
+    </com.tocong.mymobilesafe.chapter10.widget.SettingView>
+</LinearLayout>

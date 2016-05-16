@@ -2,8 +2,16 @@
 <resources>
 
     <declare-styleable name="AdvancedToolsView">
-        <attr name="desc" format="string"/>
-        <attr name="android:src"/>
+        <attr name="desc" format="string" />
+        <attr name="android:src" />
+
+
+    </declare-styleable>
+    <declare-styleable name="SettingView">
+        <attr name="settitle" format="string" />
+        <attr name="status_off" format="string" />
+        <attr name="status_on" format="string" />
+        <attr name="status_ischecked" format="boolean" />
 
 
     </declare-styleable>
